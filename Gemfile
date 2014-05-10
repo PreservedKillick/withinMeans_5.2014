@@ -14,6 +14,7 @@ gem 'spring'
 gem 'cancancan', '~>1.7'
   #for user authorization
 gem 'foundation-rails'
+gem 'sprockets', '<= 2.11.0'
 
 # #paperclip include require 'paperclip/matchers' in spec_helper.rb and below
 # #RSpec.configure do |config|
@@ -47,6 +48,7 @@ group :test, :development do
   gem 'capybara'
   gem 'launchy'
   gem 'faker'
+  gem 'dotenv-rails'
 
   #to skip js specs and run others use "rspec . --tag '~js'"
   gem 'poltergeist'
