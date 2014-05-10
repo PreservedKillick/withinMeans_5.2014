@@ -12,13 +12,31 @@
   </head>
 
   <body>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name"><h1><a href="index.html">within means</a></h1></li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li><a href="#">Users</a></li>
+          <li><a href="#">Log In (eventually)</a></li>
+          <li><a href="#">Sign Up (eventually)</a></li>
+        </ul>
+      </section>
+    </nav>
 
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, id: "flash_#{name}" %>
-    <% end %>
+    <br />
+    <br />
+
+    <div class="row">
+
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, id: "flash_#{name}" %>
+      <% end %>
 
 
-    <%= yield %>
+      <%= yield %>
+    </div>
 
     <%= javascript_include_tag "application" %>
   </body>
