@@ -1,0 +1,25 @@
+<% content_for(:title, "#{@user.name} | within means") %>
+
+
+<h3>this month so far</h3>
+<table>
+  <thead>
+    <tr>
+      <th width="100">amount</th>
+      <th width="400">note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.expenses.each do |expense| %>
+      <tr>
+        <td>expense.amount</td>
+        <td>expense.note</td>
+      </tr>
+    <% end %>
+    <tr>
+      <td>TOTAL:</td>
+      <td>@user.expenses.sum</td>
+    </tr>
+  </tbody>
+</table>
+<br />
