@@ -1,6 +1,8 @@
 WithinMeans::Application.routes.draw do
   root to: "users#index"
 
-  resources :users, :expenses
+  resources :users do
+    resources :expenses
+  end
 
 end
