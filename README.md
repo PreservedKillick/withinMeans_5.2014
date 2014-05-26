@@ -12,13 +12,14 @@ Eventually to include:
 User Stories
 #####################
 
-1.  A user can create new expense entries.  Each expense entry consists of: (1) an amount, (2) a note, (3) a category_id, (4) a user_id, (5) a timestamp.
+1.  A user can create new expense entries.  Each expense entry consists of: (1) an amount, (2) a note, (3) a user_id, (4) a timestamp.
+
 
 2.  A user can edit existing expenses.
 
 3.  A user can see expense totals by month.
 
-4.  A user can see the breakdown of each month's expenses by category.
+4.  A user can see the breakdown of each month's expenses by category. (Create category model and association with expenses.)
 
 5.  A user can sign in and create an account.
 
