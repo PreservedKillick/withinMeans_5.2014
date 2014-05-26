@@ -1,0 +1,35 @@
+<% content_for(:title, "#{@user.name} | within means") %>
+
+<h2><%= @user.name %></h2>
+<br />
+<br />
+
+<h3>overview</h3>
+<table>
+  <thead>
+    <tr>
+      <th width="200"></th>
+      <th width="150">so far</th>
+      <th width="150">budgeted amount</th>
+      <th width="150">remaining</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>this month</th>
+      <td>$$$$</td>
+      <td>$$$$</td>
+      <td>$$$$</td>
+    </tr>
+    <tr>
+      <th>this year</th>
+      <td>$$$$</td>
+      <td>$$$$</td>
+      <td>$$$$</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+
+<%= link_to 'Add Expenses', new_expense_path, class: 'button small radius secondary' %>
+<%= link_to 'View Expenses', expenses_path, class: 'button small radius secondary' %>
