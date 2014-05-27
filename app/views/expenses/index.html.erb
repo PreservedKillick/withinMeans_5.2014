@@ -10,22 +10,18 @@
     </tr>
   </thead>
   <tbody>
-
-      <span id="user_expenses">
-        <% if @expenses != nil %>
-          <%= render @expenses %>
-        <% end %>
-      </span>
-
+    <% if @expenses != nil %>
+      <%= render @expenses %>
+    <% end %>
     <tr>
-      <td>TOTAL:</td>
+      <td><b>TOTAL:</b></td>
       <% if @expenses != nil %>
         <td>
           <% amounts = [] %>
           <% @expenses.each do |expense| %>
             <% amounts << expense.amount %>
           <% end %>
-          $<%= amounts.sum %>
+          <b>$<%= amounts.sum %></b>
         </td>
       <% else %>
         <td></td>
