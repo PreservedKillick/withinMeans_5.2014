@@ -10,16 +10,29 @@
     </tr>
   </thead>
   <tbody>
-    <% @user.expenses.each do |expense| %>
-      <tr>
-        <td>expense.amount</td>
-        <td>expense.note</td>
-      </tr>
-    <% end %>
+
+      <span id="user_expenses">
+        <% if @expenses != nil %>
+          <%= render @expenses %>
+        <% end %>
+      </span>
+
     <tr>
       <td>TOTAL:</td>
-      <td>@user.expenses.sum</td>
+      <% if @expenses != nil %>
+        <td>
+          <% amounts = [] %>
+          <% @expenses.each do |expense| %>
+            <% amounts << expense.amount %>
+          <% end %>
+          $<%= amounts.sum %>
+        </td>
+      <% else %>
+        <td></td>
+      <% end %>
     </tr>
   </tbody>
 </table>
 <br />
+
+<%= link_to 'Add Expenses', new_user_expense_path(@user), class: 'button small radius secondary', id: 'new_expense_link', remote: true %>

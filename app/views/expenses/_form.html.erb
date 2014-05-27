@@ -1,0 +1,18 @@
+
+<%= render("layouts/errors", :object => @expense) %>
+
+<br />
+<%= form_for [@user, @expense], remote: true do |f| %>
+  <div class="form-group">
+    <%= f.label :amount %>
+    <%= f.number_field :amount, step: 'any' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :note %>
+    <%= f.text_field :note %>
+  </div>
+
+  <%= f.submit(:class => "button radius secondary") %>
+<% end %>
+<br />
+
