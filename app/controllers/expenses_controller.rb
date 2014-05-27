@@ -1,5 +1,9 @@
 class ExpensesController < ApplicationController
 
+  def index
+    @user = User.find(params[:user_id])
+    @expenses = @user.expenses
+  end
 
   def new
     @expense = Expense.new
